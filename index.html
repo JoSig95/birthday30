@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Einladung</title>
+</head>
+<body style="font-family:sans-serif; text-align:center; padding:2rem;">
+  <h1>🎉 Hallo <span id="gast">Gast</span>!</h1>
+  <p>Du/Ihr bist/seid herzlich eingeladen zu unserem 30. Geburtstag!</p>
+  <p><strong>Wann:</strong> 27. September 2025<br>
+  <strong>Wo:</strong> Laubbronnen 2, Laubbronnen</p>
+  <p>Wir freuen uns auf dich/euch! 🎂</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    if (name) {
+      document.getElementById("gast").textContent = decodeURIComponent(name);
+    }
+  </script>
+</body>
+</html>
