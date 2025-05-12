@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Geburtstagseinladung</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2rem; }
+    #guest-name { color: #d63384; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Hallo <span id="guest-name">Gast</span>!</h1>
+  <p>Ich lade dich herzlich zu meiner Geburtstagsparty am <strong>25. Mai 2025</strong> ein.</p>
+  <p>Adresse: Mustergasse 1, 12345 Musterstadt</p>
+
+  <script>
+    // URL-Parameter "name" auslesen
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    if (name) {
+      document.getElementById('guest-name').textContent = name;
+    }
+  </script>
+</body>
+</html>
