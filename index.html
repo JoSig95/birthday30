@@ -2,21 +2,54 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Einladung</title>
-</head>
-<body style="font-family:sans-serif; text-align:center; padding:2rem;">
-  <h1>🎉 Hallo <span id="gast">Gast</span>!</h1>
-  <p>Du/Ihr bist/seid herzlich eingeladen zu unserem 30. Geburtstag!</p>
-  <p><strong>Wann:</strong> 27. September 2025<br>
-  <strong>Wo:</strong> Laubbronnen 2, Laubbronnen</p>
-  <p>Wir freuen uns auf dich/euch! 🎂</p>
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const name = params.get("name");
-    if (name) {
-      document.getElementById("gast").textContent = decodeURIComponent(name);
+  <title>30er 90er-Party 🎉</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background-color: #f0f0ff;
+      text-align: center;
+      padding: 2rem;
     }
-  </script>
+    h1 {
+      color: #ff00cc;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px #ccc;
+      max-width: 600px;
+      margin: auto;
+    }
+    input, select, button {
+      margin: 0.5rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 90er Flashback: Unser 30er!</h1>
+    <p>Ob mit Tamagotchi oder Gameboy – wir feiern wie früher, nur mit besserem Alkohol 🍸</p>
+    <p><strong>Wann?</strong> Samstag, 27.09.2025<br>
+    <strong>Wo?</strong> Laubbronnen 2, Laubbronnen</p>
+    <p>Pack deine Buffalos, dein bestes Neon-Outfit und deinen Lieblings-90er-Hit ein! 😎</p>
+
+    <form action="https://formsubmit.co/DEINE-MAIL@adresse.de" method="POST">
+      <input type="text" name="Name" placeholder="Dein Name" required><br>
+      <select name="Kommst du?">
+        <option value="Ja, ich bin dabei! 🕺">✅ Ja, ich bin dabei!</option>
+        <option value="Nein, ich kann leider nicht 😢">❌ Nein, ich kann leider nicht</option>
+      </select><br>
+      <button type="submit">Absenden</button>
+
+      <!-- Optionen für FormSubmit -->
+      <input type="hidden" name="_subject" value="Neue Antwort auf Einladung">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+    </form>
+  </div>
 </body>
 </html>
+
