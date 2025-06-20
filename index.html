@@ -4,44 +4,87 @@
   <meta charset="utf-8">
   <title>30er 90er-Party 🎉</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     body {
-      font-family: 'Comic Sans MS', sans-serif;
-      background-color: #f0f0ff;
+      font-family: 'Press Start 2P', cursive;
+      background: radial-gradient(circle, #ffe5ec 0%, #d0e1ff 100%);
+      color: #000;
       text-align: center;
       padding: 2rem;
+      background-image: url('https://www.transparenttextures.com/patterns/pixel-weave.png');
     }
+
+    .card {
+      background: #fff8f0;
+      padding: 2rem;
+      border: 4px double #ff00cc;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      max-width: 700px;
+      margin: 2rem auto;
+    }
+
     h1 {
       color: #ff00cc;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
-    .card {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px #ccc;
-      max-width: 600px;
-      margin: auto;
+
+    p {
+      font-size: 0.85rem;
+      margin: 0.8rem 0;
     }
+
     input, select, button {
+      font-family: 'Press Start 2P', cursive;
       margin: 0.5rem;
-      padding: 0.5rem;
-      font-size: 1rem;
+      padding: 0.5rem 0.8rem;
+      font-size: 0.75rem;
+      border: 2px solid #000;
+      border-radius: 0.3rem;
+      background-color: #fff;
     }
-    #anzahlPersonenContainer {
-      display: none;
+
+    button {
+      background-color: #00ccff;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0099cc;
+    }
+
+    a {
+      color: #0000ee;
+      text-decoration: underline;
+      font-size: 0.8rem;
+    }
+
+    .calendar-links, .directions {
+      margin-top: 2rem;
+    }
+
+    img {
+      max-width: 100%;
+      border: 4px dotted #333;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Insert Disk – Start Game: </h1>
-    <p>Sarah & Joni Level 30 --> 90er-Party mit Bonusrunde an der Bar und Soundtracks von früher</p>
+    <h1>INSERT DISK – START GAME</h1>
+    <p>Sarah & Joni Level 30</p>
+    <p>90er-Party mit Bonusrunde an der Bar und Soundtracks von früher</p>
     <p><strong>Wann?</strong> Samstag, 27.09.2025 // 19:30 Uhr<br>
     <strong>Wo?</strong> Laubbronnen 2, 88326 Laubbronnen</p>
-    <p>Essen: Pizza</p>
-    <p>Dresscode: 90er – wir warten im nächsten Level!</p>
-    <p>Noch Fragen?</p> 
-    <p>Sarah: +49 1716321363</p> 
-    <p>Joni: +49 1707000509</p>
+    <p><strong>Essen:</strong> Pizza</p>
+    <p><strong>Dresscode:</strong> 90er – wir warten im nächsten Level!</p>
+    <p>Bei Fragen:</p>
+    <p>Sarah: +49 171 6321363<br>Joni: +49 170 7000509</p>
 
     <form action="https://formsubmit.co/joni.sigmund@gmail.com" method="POST">
       <input type="text" id="nameField" name="Name" placeholder="Dein/Eure Namen" required><br>
@@ -52,17 +95,26 @@
         <option value="❌ Nein, ich/wir kann/können leider nicht">❌ Nein, ich/wir kann/können leider nicht</option>
       </select><br>
 
-      <button type="submit">Absenden</button>
+      <button type="submit">ABSENDEN</button>
 
-      <!-- Optionen für FormSubmit -->
       <input type="hidden" name="_subject" value="Party-Rückmeldung">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
     </form>
   </div>
 
+  <div class="calendar-links">
+    <p>🗓️ <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Sarah+%26+Joni+werden+30%21+%F0%9F%8E%89&dates=20250927T173000Z/20250928T020000Z&details=30er+Geburtstag+Sarah+und+Jonathan.+90er+Party&location=Laubbronnen+2,+Laubbronnen&sf=true&output=xml" target="_blank">Zum Google Kalender hinzufügen</a></p>
+    <p>📂 <a href="party_einladung_30er.ics" download>.ics-Datei für Apple / Outlook herunterladen</a></p>
+  </div>
+
+  <div class="directions">
+    <h2>🗺️ So findet Ihr uns</h2>
+    <p>Folge dem Navi zu diesem Gebäude – der Eingang ist dort, wo der rote Pfeil zeigt!</p>
+    <img src="Screenshot 2025-06-20 101224.png" alt="Wegbeschreibung">
+  </div>
+
   <script>
-    // Name aus URL übernehmen, falls mit ?name=... aufgerufen
     const params = new URLSearchParams(window.location.search);
     const name = params.get("name");
     if (name) {
@@ -70,21 +122,4 @@
     }
   </script>
 </body>
-
-<p>
-  📅 <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Sarah+%26+Joni+werden+30%21+%F0%9F%8E%89&dates=20250927T173000Z/20250928T020000Z&details=30er+Geburtstag+Sarah+und+Jonathan.+90er+Party&location=Laubbronnen+2,+Laubbronnen&sf=true&output=xml">
-    Zum Google Kalender hinzufügen
-  </a>
-</p>
-
-<p>
-  📂 <a href="party_einladung_30er.ics" download>
-    .ics-Datei für Apple / Outlook herunterladen
-  </a>
-</p>
-  
-  <h2>🗺️ So findet Ihr uns</h2>
-<p>Folge dem Navi zu diesem Gebäude – der Eingang ist dort, wo der rote Pfeil zeigt!</p>
-<img src="Screenshot 2025-06-20 101224.png" alt="Wegbeschreibung" style="max-width:100%; border-radius:1rem; margin-top:1rem;">
-
 </html>
