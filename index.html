@@ -26,6 +26,9 @@
       padding: 0.5rem;
       font-size: 1rem;
     }
+    #anzahlPersonenContainer {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -37,19 +40,10 @@
     <p>Pack deine Buffalos, dein bestes Neon-Outfit und deinen Lieblings-90er-Hit ein! 😎</p>
 
     <form action="https://formsubmit.co/DEINE-MAIL@adresse.de" method="POST">
-      <input type="text" name="Name" placeholder="Dein Name" required><br>
-      <select name="Kommst du?">
+      <input type="text" id="nameField" name="Name" placeholder="Dein Name" required><br>
+
+      <select name="Antwort" id="antwortSelect" required>
+        <option disabled selected>-- Bitte auswählen --</option>
         <option value="Ja, ich bin dabei! 🕺">✅ Ja, ich bin dabei!</option>
-        <option value="Nein, ich kann leider nicht 😢">❌ Nein, ich kann leider nicht</option>
-      </select><br>
-      <button type="submit">Absenden</button>
-
-      <!-- Optionen für FormSubmit -->
-      <input type="hidden" name="_subject" value="Neue Antwort auf Einladung">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-    </form>
-  </div>
-</body>
-</html>
-
+        <option value="Ja, wir sind dabei! 👯">✅ Ja, wir sind dabei!</option>
+        <option value="Nein, ich ka
