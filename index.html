@@ -41,48 +41,30 @@
     <p>Bei Fragen: Sarah +49 1716321363 oder Joni +49 1707000509</p>
 
     <form action="https://formsubmit.co/joni.sigmund@gmail.com" method="POST">
-      <input type="text" id="nameField" name="Name" placeholder="Dein Name" required><br>
+      <input type="text" id="nameField" name="Name" placeholder="Dein/Eure Namen" required><br>
 
-      <select name="Antwort" id="antwortSelect" required>
+      <select name="Antwort" required>
         <option disabled selected>-- Bitte auswählen --</option>
-        <option value="Ja, ich bin dabei! 🕺">✅ Ja, ich bin dabei!</option>
-        <option value="Ja, wir sind dabei! 👯">✅ Ja, wir sind dabei!</option>
-        <option value="Nein, ich kann leider nicht 😢">❌ Nein, ich kann leider nicht</option>
+        <option value="✅ Ja, ich/wir bin/sind dabei!">✅ Ja, ich/wir bin/sind dabei!</option>
+        <option value="❌ Nein, ich/wir kann/können leider nicht">❌ Nein, ich/wir kann/können leider nicht</option>
       </select><br>
-
-      <div id="anzahlPersonenContainer">
-        <label for="anzahlPersonen">Wieviele Personen?</label><br>
-        <input type="number" name="Anzahl Personen" id="anzahlPersonen" min="1" value="1">
-      </div><br>
 
       <button type="submit">Absenden</button>
 
       <!-- Optionen für FormSubmit -->
-      <input type="hidden" name="_subject" value="Neue Einladung-Rückmeldung">
+      <input type="hidden" name="_subject" value="Party-Rückmeldung">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
     </form>
   </div>
 
   <script>
-    // Name aus URL übernehmen
+    // Name aus URL übernehmen, falls mit ?name=... aufgerufen
     const params = new URLSearchParams(window.location.search);
     const name = params.get("name");
     if (name) {
       document.getElementById("nameField").value = decodeURIComponent(name);
     }
-
-    // Anzeige der Personenanzahl nur bei Gruppenzusage
-    const antwortSelect = document.getElementById("antwortSelect");
-    const anzahlContainer = document.getElementById("anzahlPersonenContainer");
-
-    antwortSelect.addEventListener("change", function () {
-      if (this.value === "Ja, wir sind dabei! 👯") {
-        anzahlContainer.style.display = "block";
-      } else {
-        anzahlContainer.style.display = "none";
-      }
-    });
   </script>
 </body>
 
