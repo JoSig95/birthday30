@@ -89,17 +89,16 @@
 </head>
 <body>
   <script>
-  window.onload = function () {
-    const correctPassword = "LEVEL30"; // Passwort aus der Disketten-Beschriftung
-    const userInput = prompt("🔒 Passwort erforderlich
-Hinweis: Beschriftung der Diskette
-L .... 0 (Großbuchstaben ohne Leerzeichen)");
+    window.onload = function () {
+      const correctPassword = "LEVEL30"; // Passwort aus der Disketten-Beschriftung
+      const userInput = prompt("🔒 Passwort erforderlich\nHinweis: Beschriftung der Diskette\nL .... 0 (Großbuchstaben ohne Leerzeichen)");
 
-    if (userInput !== correctPassword) {
-      document.body.innerHTML = "<h1 style='text-align:center;margin-top:4rem;font-family:monospace;'>🚫 Zugriff verweigert</h1>";
-    }
-  };
-</script>
+      if (userInput !== correctPassword) {
+        document.body.innerHTML = "<h1 style='text-align:center;margin-top:4rem;font-family:monospace;'>🚫 Zugriff verweigert</h1>";
+      }
+    };
+  </script>
+
   <div class="card">
     <h1>INSERT DISK – START GAME</h1>
     <p><strong>Sarah & Joni – Level 30</strong></p>
@@ -135,7 +134,7 @@ L .... 0 (Großbuchstaben ohne Leerzeichen)");
   </div>
 
   <div class="directions">
-    <h2>🗺️ So findet Ihr uns</h2>
+    <h2>📺 So findet Ihr uns</h2>
     <p>Folge dem Navi zu diesem Gebäude – der Eingang ist dort, wo der rote Pfeil zeigt!</p>
     <img src="Screenshot 2025-06-20 101224.png" alt="Wegbeschreibung">
   </div>
