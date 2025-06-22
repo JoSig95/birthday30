@@ -88,17 +88,27 @@
   </style>
 </head>
 <body>
+  <script>
+    const correctPassword = "LEVEL30";
+    const userInput = prompt("Zugriff nur mit Passwort 🕹️
+Bitte Code eingeben:");
+
+    if (userInput !== correctPassword) {
+      document.body.innerHTML = "<h1 style='text-align:center;margin-top:4rem;font-family:monospace;'>🚫 Zugriff verweigert</h1>";
+      throw new Error("Zugriff verweigert");
+    }
+  </script>
   <div class="card">
     <h1>INSERT DISK – START GAME</h1>
 <p><strong>Sarah & Joni – Level 30</strong></p>
 <p>Level-Mission: Tanzfläche zerlegen, Barkeeper bezwingen und mit uns den Highscore einer unvergesslichen Nacht knacken!</p>
+    <p>90er-Party mit Endgegner Barkeeper & geilen Soundtracks in Dauerschleife</p>
     <p><strong>Wann?</strong> Samstag, 27.09.2025 // 19:30 Uhr<br>
     <strong>Wo?</strong> Laubbronnen 2, 88326 Laubbronnen</p>
     <p><strong>Essen:</strong> Pizza</p>
     <p><strong>Dresscode:</strong> 90er – wir warten im nächsten Level!</p>
     <p>Bei Fragen:</p>
-    <p>Sarah Weber: +49 171 6321363<br>Joni Sigmund: +49 170 7000509</p>
-    <p>Bitte gebt uns bis <strong>1. August</strong> über die nachfolgende Abfrage bescheid ob Ihr am Start seid</p>
+    <p>Sarah: +49 171 6321363<br>Joni: +49 170 7000509</p>
 
     <form action="https://formsubmit.co/joni.sigmund@gmail.com" method="POST">
       <input type="text" id="nameField" name="Name" placeholder="Dein/Eure Namen" required><br>
