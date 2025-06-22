@@ -88,20 +88,21 @@
   </style>
 </head>
 <body>
-<script>
-  const correctPassword = "gameboy30";
-  const userInput = prompt("Zugriff nur mit Passwort 🕹️\\nBitte Code eingeben:");
+  <script>
+  window.onload = function () {
+    const correctPassword = "gameboy30";
+    const userInput = prompt("Zugriff nur mit Passwort 🕹️
+Bitte Code eingeben:");
 
-  if (userInput !== correctPassword) {
-    document.body.innerHTML = "<h1 style='text-align:center;margin-top:4rem;font-family:monospace;'>🚫 Zugriff verweigert</h1>";
-    throw new Error("Zugriff verweigert");
-  }
+    if (userInput !== correctPassword) {
+      document.body.innerHTML = "<h1 style='text-align:center;margin-top:4rem;font-family:monospace;'>🚫 Zugriff verweigert</h1>";
+    }
+  };
 </script>
-
   <div class="card">
     <h1>INSERT DISK – START GAME</h1>
-<p><strong>Sarah & Joni – Level 30</strong></p>
-<p>Level-Mission: Tanzfläche zerlegen, Barkeeper bezwingen und mit uns den Highscore einer unvergesslichen Nacht knacken!</p>
+    <p><strong>Sarah & Joni – Level 30</strong></p>
+    <p>Level-Mission: Tanzfläche zerlegen, Barkeeper bezwingen und mit uns den Highscore einer unvergesslichen Nacht knacken!</p>
     <p>90er-Party mit Endgegner Barkeeper & geilen Soundtracks in Dauerschleife</p>
     <p><strong>Wann?</strong> Samstag, 27.09.2025 // 19:30 Uhr<br>
     <strong>Wo?</strong> Laubbronnen 2, 88326 Laubbronnen</p>
